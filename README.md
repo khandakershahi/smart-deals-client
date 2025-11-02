@@ -1,4 +1,4 @@
-#This is smart deals site client repo
+# This is smart deals site client repo
 
 
 # React + Vite
