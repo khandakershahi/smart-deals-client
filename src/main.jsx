@@ -14,6 +14,7 @@ import RootLayout from './Layouts/RootLayout.jsx';
 import AuthProvider from './context/AuthProvider.jsx';
 import MyProducts from './components/MyProducts/MyProducts.jsx';
 import MyBids from './components/MyBids/MyBids.jsx';
+import ProductDetails from './components/ProductDetails/ProductDetails.jsx';
 
 const router = createBrowserRouter([
   {
@@ -25,20 +26,25 @@ const router = createBrowserRouter([
         Component: Home
       },
       {
-        path: 'allProducts',
+        path: '/allProducts',
         Component: AllProducts
       }, 
       {
-        path: 'register',
+        path: '/register',
         Component: Register
       }, 
       {
-        path: 'myProducts',
+        path: '/myProducts',
         element: <MyProducts></MyProducts>
       },
       {
-        path: 'myBids',
+        path: '/myBids',
         element: <MyBids></MyBids>
+      },
+      {
+        path: '/productDetails/:id',
+        loader: ({params}) => fetch(`http://localhost:3000/products/${params.id}`),
+        Component: ProductDetails
       }
      
     ]
