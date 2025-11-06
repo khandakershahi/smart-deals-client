@@ -37,8 +37,8 @@ const Register = () => {
   };
 
   return (
-    <div className="card bg-base-100 w-full mx-auto max-w-sm shrink-0 shadow-2xl">
-      <h1 className="text-5xl font-bold">Login now!</h1>
+    <div className="card bg-base-100 w-full mx-auto max-w-sm shrink-0 shadow-2xl mt-20">
+      <h1 className="text-5xl font-bold text-center py-5">Register now!</h1>
       <div className="card-body">
         <fieldset className="fieldset">
           <label className="label">Email</label>
@@ -81,7 +81,7 @@ const Register = () => {
               ></path>
             </g>
           </svg>
-          Login with Google
+          Register with Google
         </button>
       </div>
     </div>
